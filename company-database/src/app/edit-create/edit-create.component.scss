@@ -1,0 +1,33 @@
+div {
+    border-radius: 5px;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.submit-btn {
+    margin-right: 5px;
+    background-color: #005aff;
+    border-color: #005aff;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: white;
+    color: gray;
+    border-color: gray;
+}

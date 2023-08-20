@@ -1,0 +1,51 @@
+<div class="form-group">
+    <form>
+        <div>
+            <label for="power">Name </label>
+            <input type="text" class="form-control" id="name"
+           required
+           [(ngModel)]="employeeData.name" name="name">
+        </div>
+        <div>
+            <label for="power">Email </label>
+            <input type="text" class="form-control" id="email"
+           required
+           [(ngModel)]="employeeData.email" name="email">
+        </div>
+        <div>
+            <label for="power">Company</label>
+            <input type="text" class="form-control" id="company"
+           required
+           [(ngModel)]="employeeData.company.name" name="company">
+        </div>
+        <div>
+            <label for="power">Address </label>
+            <input type="text" class="form-control" id="address"
+           required
+           [(ngModel)]="employeeData.address.street+', '+employeeData.address.suite" name="address">
+        </div>
+        <div>
+            <label for="power">City </label>
+            <input type="text" class="form-control" id="city"
+           required
+           [(ngModel)]="employeeData.address.city" name="city">
+        </div>
+        <div>
+            <label for="power">State </label>
+            <input type="text" class="form-control" id="state"
+           required
+           [(ngModel)]="employeeData.address.state" name="state">
+        </div>
+        <div>
+            <label for="power">Zip </label>
+            <input type="text" class="form-control" id="zip"
+           required
+           [(ngModel)]="employeeData.address.zipcode" name="zip">
+        </div>
+        <div>
+            <button class="submit-btn" (click)="submitForm() ">Submit</button>
+            <button class="cancel-btn" (click)="goToPage('home')">Cancel</button>
+        </div>
+    </form>
+    
+</div>

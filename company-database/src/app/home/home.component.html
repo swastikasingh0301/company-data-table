@@ -1,0 +1,52 @@
+<div class="body-header">
+    <input type="text" placeholder="Search" (keyup)="filterResults(filter.value)" #filter>
+    <button class="create-btn"  (click)="goToPage('create')">
+      Create
+    </button>
+  </div>
+  <div class="employee-table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            Name
+            <span *ngIf="!isNameAsc" class="material-icons" (click)="sortEmployeeByNameAsc()" >arrow_drop_down</span>
+            <span *ngIf="isNameAsc" class="material-icons" (click)="sortEmployeeByNameDsc()">arrow_drop_up</span>
+          </th>
+          <th>
+            Email
+            <span *ngIf="!isEmailAsc" class="material-icons" (click)="sortEmployeeByEmailAsc()" >arrow_drop_down</span>
+            <span *ngIf="isEmailAsc" class="material-icons" (click)="sortEmployeeByEmailDsc()">arrow_drop_up</span>
+          </th>
+          <th>
+            Company
+            <span *ngIf="!isCompanyAsc" class="material-icons" (click)="sortEmployeeByCompanyAsc()">arrow_drop_down</span>
+            <span *ngIf="isCompanyAsc" class="material-icons" (click)="sortEmployeeByCompanyDsc()">arrow_drop_up</span>
+          </th>
+          <th>
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider table-divider-color">
+        <tr *ngFor="let employee of filteredEmployeeData">
+          <td>
+            <a routerLink="/user/{{employee.id}}" routerLinkActive="active" ariaCurrentWhenActive="page">
+              {{employee.name}}
+            </a>
+          </td>
+          <td>
+            {{employee.email}}
+          </td>
+          <td>
+            {{employee.company.name}}
+          </td>
+          <td>
+            <button class="edit-btn" (click)="goToPage('users', employee.id, 'edit' )">Edit</button>
+            <button class="delete-btn" (click)="openModal(employee)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,51 @@
+.employee-table-container {
+    display:flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    font-family: sans-serif;
+}
+
+table, th , td  {
+    border-bottom: 1px solid grey;
+    border-collapse: collapse;
+    padding: 0.5em;
+    text-align: left; 
+}
+
+button {
+    border-radius: 5px;
+    background-color: white;
+    padding: 6px;
+}
+
+.edit-btn {
+    margin-right: 5px;
+    color: #009cff;
+    border-color: #009cff;
+}
+
+.delete-btn {
+    color: #ff1a00de;
+    border-color: #ff1a00de;
+}
+
+.create-btn {
+    color: white;
+    background-color:#005aff;
+}
+
+.body-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type="text"]::placeholder {
+    text-align: left;
+}
+
+input[type="text"] {
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left:10px;
+}
+  
